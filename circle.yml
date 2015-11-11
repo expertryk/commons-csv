@@ -1,6 +1,10 @@
 machine:
   java:
     version: openjdk7
+checkout:
+  post:
+    - git submodule sync
+    - git submodule update --init
 test:
  post:
    - mkdir -p $CIRCLE_TEST_REPORTS/junit/
