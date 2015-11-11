@@ -150,23 +150,6 @@ CSV files of various types.
             </ignorePathsToDelete>
           </configuration>
         </plugin>
-        <plugin>
-        <artifactId>maven-failsafe-plugin</artifactId>
-        <version>2.17</version>
-        <configuration>
-          <skipTests>true</skipTests>
-        </configuration>
-        <executions>
-          <execution>
-            <goals>
-              <goal>integration-test</goal>
-              <goal>verify</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-    </plugins>
-  </build>
       </plugins>
     </pluginManagement>  
     <plugins>
@@ -206,6 +189,22 @@ CSV files of various types.
           <configLocation>${basedir}/checkstyle.xml</configLocation>
           <enableRulesSummary>false</enableRulesSummary>
         </configuration>
+      </plugin>
+     <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-failsafe-plugin</artifactId>
+        <version>2.17</version>
+        <configuration>
+          <skipTests>true</skipTests>
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>integration-test</goal>
+              <goal>verify</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
 
       <!-- We need to add our test data files to rat exclusions -->
