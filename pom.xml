@@ -157,7 +157,7 @@ CSV files of various types.
         <artifactId>maven-compiler-plugin</artifactId>
         <configuration>
           <testExcludes>
-            <testExclude>**/*Benchmark*</testExclude>
+            <testExclude>true</testExclude>
           </testExcludes>
         </configuration>
       </plugin>
